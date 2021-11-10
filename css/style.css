@@ -429,3 +429,103 @@ header nav .form i {
 }
 
 /* End Design */
+/* Start Portfolio */
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+}
+.portfolio .shuffle li {
+  padding: 10px;
+}
+
+.portfolio .shuffle li.active {
+  background-color: var(--main-Color);
+  color: white;
+}
+
+.portfolio .images-container {
+  display: flex;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.portfolio .images-container .image-box {
+  position: relative;
+  /* Hidden the the caption pushed outside of the box */
+  overflow: hidden;
+}
+
+.portfolio .images-container .image-box:hover .image-captionn {
+  /* Bring the caption text in the border of the image box when hover using animation */
+  bottom: 0;
+}
+.portfolio .images-container .image-box:hover img {
+  transform: rotate(3deg) scale(1.1);
+  -webkit-transform: rotate(3deg) scale(1.1);
+  -moz-transform: rotate(3deg) scale(1.1);
+  -ms-transform: rotate(3deg) scale(1.1);
+  -o-transform: rotate(3deg) scale(1.1);
+}
+
+/* After the mobile screen size made only 2 images in the row  */
+@media (min-width: 768px) {
+  .portfolio .images-container .image-box {
+    flex-basis: 50%;
+  }
+}
+/* Large screen made the image take 25% of the screen size to get 4 images per row */
+@media (min-width: 1200px) {
+  .portfolio .images-container .image-box {
+    flex-basis: 25%;
+  }
+}
+.portfolio .images-container .image-box img {
+  /*Preventimagetogooutitscontainer*/
+  max-width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  
+}
+
+.portfolio .images-container .image-box .image-captionn {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  transition: bottom 0.3s;
+  -webkit-transition: bottom 0.3s;
+  -moz-transition: bottom 0.3s;
+  -ms-transition: bottom 0.3s;
+  -o-transition: bottom 0.3s;
+  /*Push caption textoutside the image-box container*/
+  bottom: -100%;
+}
+.portfolio .images-container .image-box .image-captionn h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.portfolio .images-container .image-box .image-captionn p {
+  color: var(--main-Color);
+}
+
+.portfolio .portfolio-more {
+  background-color: var(--main-Color);
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* End Portfolio */
