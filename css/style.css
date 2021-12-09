@@ -180,6 +180,7 @@ header nav ul li a {
   z-index: 2; /*  z-index only affects elements that have a position value */
   position: relative;
   border-bottom: 1px solid transparent;
+  color: white;
 }
 header nav ul li a:hover {
   color: var(--main-Color);
