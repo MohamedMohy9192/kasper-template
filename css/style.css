@@ -641,7 +641,7 @@ header nav .form i {
 /* For mobile screen from 0 to 767 px width  */
 @media (max-width: 767px) {
   /* Make the box take the full with of the screen  */
-  .stats .container .boox {
+  .stats .container .box {
     flex-basis: 100%;
   }
 }
@@ -686,3 +686,103 @@ header nav .form i {
   font-size: 14px;
 }
 /* End Stats */
+/* Start Skills */
+.our-skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.our-skills .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+  /* Select all div elements where the parent is .our-skill .container element */
+  /* i.e testimonials and skills elements */
+  .our-skills .container > div {
+    flex-basis: 45%;
+  }
+}
+/* Select all h3 elements where the parent is .our-skill .container div elements 
+in testimonials and skills elements */
+.our-skills .container > div > h3 {
+  margin: 0 0 30px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.our-skills .container > div > p {
+  color: #777;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.our-skills .testimonials .content {
+  display: flex;
+  /* Privent image from stretch because of default aligan items which is stratch */
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.our-skills .testimonials .content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: 50px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .our-skills .testimonials .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .our-skills .testimonials .content img {
+    margin: 0 auto 20px;
+  }
+}
+
+.our-skills .testimonials .text {
+  line-height: 1.8;
+  border-bottom: 1px solid #ccc;
+}
+
+.our-skills .testimonials .text p {
+  color: #777;
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.our-skills .testimonials .bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.our-skills .testimonials .bullets li {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: 10px;
+}
+
+.our-skills .testimonials .bullets li.active {
+  background-color: var(--main-Color);
+  border-color: var(--main-Color);
+}
+/* End Skills */
